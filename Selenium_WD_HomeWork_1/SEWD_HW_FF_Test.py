@@ -41,7 +41,7 @@ class SeleniumTest(TestCase):
         elem = drv.find_element_by_name("vb_login_password")
         elem.send_keys("qweasd123")
         elem.send_keys(Keys.RETURN)
-        #checking if login is successful
+        #checking if login failed and processed correctly
         assert "http://www.forexfactory.com/login.php?do=login" in drv.current_url
         drv.close()
 
